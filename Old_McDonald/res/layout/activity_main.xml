@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/header" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="Permanent Marker"
+        android:textSize="46sp"
+        android:textColor="#8B2252"
+        android:text="OLD MacDONALD" />
+
+     <Button
+         android:id="@+id/dog"
+         android:layout_width="71sp"
+         android:layout_height="91sp"
+         android:layout_alignLeft="@+id/header"
+         android:layout_centerVertical="true"
+         android:layout_marginLeft="14dp"
+         android:background="@drawable/dog" />
+
+     <Button
+         android:id="@+id/pig"
+         android:layout_width="76sp"
+         android:layout_height="70sp"
+         android:layout_below="@+id/dog"
+         android:layout_marginRight="36dp"
+         android:layout_marginTop="22dp"
+         android:layout_toLeftOf="@+id/ship"
+         android:background="@drawable/pig" />
+
+     <Button
+         android:id="@+id/cow"
+         android:layout_width="104sp"
+         android:layout_height="87sp"
+         android:layout_above="@+id/pig"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/cow" />
+
+     <Button
+         android:id="@+id/chicken"
+         android:layout_width="87sp"
+         android:layout_height="91sp"
+         android:layout_above="@+id/dog"
+         android:layout_centerHorizontal="true"
+         android:background="@drawable/chicken" />
+
+     <Button
+         android:id="@+id/ship"
+         android:layout_width="84sp"
+         android:layout_height="80sp"
+         android:layout_alignBottom="@+id/pig"
+         android:layout_alignRight="@+id/header"
+         android:layout_marginRight="45dp"
+         android:background="@drawable/ship" />
+
+      <Button
+          android:id="@+id/newGame"
+          android:layout_width="40sp"
+          android:layout_height="40sp"
+          android:layout_alignLeft="@+id/header"
+          android:layout_alignParentBottom="true"
+          android:background="@drawable/plus_sign" 
+          android:onClick="onNewGame"/>
+
+      <Button
+          android:id="@+id/replayGame"
+          android:layout_width="60sp"
+          android:layout_height="60sp"
+          android:layout_alignBaseline="@+id/newGame"
+          android:layout_alignBottom="@+id/newGame"
+          android:layout_alignRight="@+id/cow"
+          android:background="@drawable/replay"
+          android:onClick="onReplayGame"
+          android:visibility="visible" />
+
+</RelativeLayout>
